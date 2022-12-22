@@ -40,7 +40,8 @@
   </body>
 
   <script>
-    const MoodContractAddress = "0xC9dbbD2479F020eCf562516E688CAC4ab0d19a47";
+    // const MoodContractAddress = "0xC9dbbD2479F020eCf562516E688CAC4ab0d19a47"; // Rinkeby
+    const MoodContractAddress = "0x23D11c93bDDcEd86b4a00a635E5E31b894631D69"; // Goerli
     const MoodContractABI = [
       {
         inputs: [],
@@ -73,7 +74,8 @@
     let signer;
     const provider = new ethers.providers.Web3Provider(
       window.ethereum,
-      "rinkeby"
+      "goerli"
+      //   "rinkeby"
     );
     provider.send("eth_requestAccounts", []).then(() => {
       provider.listAccounts().then((accounts) => {
